@@ -58,15 +58,23 @@ for(changes of supplyChanges) {
   }
   else if (changes < 0) {
     console.log('Removed', changes * -1, 'parts.');
-  }
+  } // Again, adding the <* -1> to make more grammatical sense in the log.
   else {
     console.log('No Change.');
-  }
+  } // Swapped 'no change' condition at the end as the 'else' condition as it
+    // doesn't make a difference other than seeming more logical sequence of events
+    // to me ¯\_(ツ)_/¯
 }
 
 // 8. Write a loop to determine the total number of parts available by
 //    adding up all the numbers in the 'supplyChanges' array.
-console.log('8. Total supplies available is:');
+console.log('8. Total supplies available is:' );
+
+let sum = 0;
+for (let i = 0; i < supplyChanges.length; i++) {
+    sum += supplyChanges[i];
+}
+console.log(sum);
 
 // 9. We have a large stash of parts in our warehouse that we
 //    need to box up and get ready for shipment.
