@@ -16,7 +16,7 @@ console.log('3. Second supplyChange is:', supplyChanges[1]);
 
 // 4. The last item was added by mistake. Remove it from the 'supplyChanges'
 //    array & console.log the value removed.
-removedItem = supplyChanges.pop();
+let removedItem = supplyChanges.pop();
 console.log('4. Removed item:', removedItem);
 
 // 5. A delivery of 25 more parts arrived. Add the value 25 to the end of the array
@@ -31,7 +31,7 @@ console.log('5. Adding 25 to supplyChanges.', supplyChanges);
 
 console.log('6. Showing supplyChanges...');
 
-for( x in supplyChanges) {
+for(let x in supplyChanges) {
   if(supplyChanges[x] > 0) {
     console.log('Added', supplyChanges[x], 'parts.');
   } // Logs positive changes to supplyChanges.
@@ -52,7 +52,7 @@ console.log('---  Stretch Goals  ---');
 // 7. Rewrite the `for` loop from #6 as a `for of` loop.
 console.log('7. Showing supplyChanges with "for of" loop');
 
-for(changes of supplyChanges) {
+for(let changes of supplyChanges) {
   if (changes > 0) {
     console.log('Added', changes, 'parts.');
   }
